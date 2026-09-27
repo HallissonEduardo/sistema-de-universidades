@@ -1,51 +1,16 @@
-from datetime import date
-from abc import ABC
 
-#hoje = date.today()
-
-
-
-class Universidades(ABC):
-
-    def __init__(self, nome):
-        pass
-
-
-
-
-
-
-
-
-class anhamguera(Universidades):
-
-    def __init__(self, ):
-        self.nome: str = ""
-        self.matricula: int = 0
-        self.nascimento: str = ""
-        self.bolsa: int = 0
-        self.data = date.today()
-
-
-    def aniversario(self):
-
-            if self.nascimento == hoje:
-                print(f"Parabéns {self.nome}. É seu aniversario")
-                print("!!!!!!!FELIZ ANIVERSARIO!!!!!")
-
-    def cadastrar(self):
-        print("Olá bem vindo a Anhanguera!")
-
-
-
-        print("=== CADASTRAR ALUNO ===")
-        self.nome = input("Qual o seu nome: ")
-        # MATRICULO VOU DEIXAR PARA GERAR AUTOMATICO.
-        self.nascimento = input("Qual a sua data de nascimento: ")
-
-
+from universidades import universidades
 
 if __name__ == '__main__':
 
-    aluno = aluno()
+    aluno = universidades(
+        "hallisson",
+        123,
+        "19/12/2003",
+        bolsa=True,
+        desconto=50
+    )
+
+    print(aluno.exibir())
+
 

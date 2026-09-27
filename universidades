@@ -1,0 +1,20 @@
+from dataclasses import dataclass
+from datetime import date
+from abc import ABC
+
+#hoje = date.today()
+
+@dataclass
+class universidades:
+        nome: str
+        matricula: int
+        nascimento: str
+        bolsa: bool = False
+        desconto: float = 0
+
+
+        def cadastrar(self):
+            pass
+
+        def exibir(self):
+            return f"Nome do aluno: {self.nome}, RA: {self.matricula}, data de nascimento: {self.nascimento}"
